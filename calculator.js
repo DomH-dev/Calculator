@@ -6,6 +6,7 @@ let result;
 const keypad = document.querySelector("#keypad")
 const displayBox = document.querySelector("#mainDisplay")
 const historicDisplay = document.querySelector("#historicValues")
+
 keypad.addEventListener("click", function(e) {
   if (e.target.classList.contains("number")) {
     addValue(e.target.textContent);
@@ -17,20 +18,21 @@ keypad.addEventListener("click", function(e) {
     historicDisplay.textContent = "";
   }
 })
+
 function add(a, b) {
-  return a + b;
+  return +a + +b;
 }
 
 function subtract(a, b) {
-  return a - b;
+  return +a - +b;
 }
 
 function multiply(a, b) {
-  return a * b;
+  return +a * +b;
 }
 
 function divide(a, b) {
-  return a / b;
+  return +a / +b;
 }
 
 function operate(firstNumber, operator, secondNumber) {
@@ -73,5 +75,5 @@ function saveCurrentNumber(value, firstOrSecondSwitch) {
     firstNumber = value;
   } else {
     secondNumber = value;
-}
+  }
 }
