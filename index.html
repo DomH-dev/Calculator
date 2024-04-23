@@ -9,8 +9,13 @@
   <link rel="shortcut icon" href="#">
 </head>
 <body>
+  
   <div class="container main_container">
-    <div class="container" id="display"></div>
+    <button>Clear</button>
+    <div class="container" id="display">
+      <div class="container" id="historicValues"></div>
+      <div class="container" id="mainDisplay"></div>
+    </div>
     <div class="container" id="keypad">
       <div class="container numbers">
         <button class="number" id="seven">7</button>
@@ -23,14 +28,14 @@
         <button class="number" id="two">2</button>
         <button class="number" id="three">3</button>
         <button class="number" id="decimal">.</button>
-        <button class="number" id="0">0</button>
-        <button class="number" id="equals">=</button>
+        <button class="number" id="zero">0</button>
+        <button class="equals" id="equals">=</button>
       </div>
       <div class="container operators">
-        <button class="plus">+</button>
-        <button class="minus">-</button>
-        <button class="multiply">X</button>
-        <button class="divide">/</button>
+        <button class="operator" id="plus">+</button>
+        <button class="operator" id="minus">-</button>
+        <button class="operator" id="multiply">X</button>
+        <button class="operator" id="divide">/</button>
       </div>
     </div>
   </div>
