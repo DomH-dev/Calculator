@@ -1,10 +1,11 @@
 .container {
   display:flex;
-  border: solid 1px black;
+
 }
 
 .main_container {
   margin: 50% auto;
+  border: solid 1px black;
 }
 
 .main_container,
@@ -15,7 +16,24 @@
 
 .container#display {
   width:100%;
-  min-height: 45px;
+  flex-wrap: wrap;
+  min-height: 55px;
+  justify-content: center;
+  flex-direction: row;
+  border: solid 1px black;
+}
+
+#historicValues {
+  height:25%;
+  width: 85%;
+  font-size: 1em;
+  justify-content: right;
+}
+
+#mainDisplay {
+  width: 100%;
+  justify-content: right;
+  font-size: 2em;
 }
 
 .container#keypad {
@@ -24,7 +42,9 @@
   flex-wrap: nowrap;
 }
 
-.number {
+.number,
+.numbers > .operator, 
+.numbers > .equals {
   width:33%;
 }
 
