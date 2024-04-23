@@ -22,6 +22,20 @@ function divide(a, b) {
   return a / b;
 }
 
-function operate(firstNumber, operation, secondNumber) {
-
+function operate(firstNumber, operator, secondNumber) {
+  switch(operator) {
+    case "+":
+      result = add(firstNumber, secondNumber);
+      return result;
+    case "-":
+      result = subtract(firstNumber, secondNumber);
+      return result;
+    case "X":
+      result = multiply(firstNumber, secondNumber);
+      return result;
+    case "/":
+      result = divide(firstNumber, secondNumber);
+      return result;
+  }
+}
 }
