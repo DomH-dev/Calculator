@@ -6,6 +6,9 @@ let result;
 const keypad = document.querySelector("#keypad")
 const displayBox = document.querySelector("#mainDisplay")
 const historicDisplay = document.querySelector("#historicValues")
+const clearButton = document.querySelector("#clearButton")
+
+clearButton.addEventListener("click", resetCalculator);
 
 keypad.addEventListener("click", function(e) {
   if (e.target.classList.contains("number")) {
@@ -77,4 +80,13 @@ function saveCurrentNumber(value, firstOrSecondSwitch) {
   } else {
     secondNumber = value;
   }
+}
+
+function resetCalculator() {
+  displayBox.textContent = "";
+  historicDisplay.textContent = "";
+  firstNumber = 0;
+  secondNumber = 0;
+  operatorValue;
+  result;
 }
