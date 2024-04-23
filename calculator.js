@@ -14,7 +14,8 @@ keypad.addEventListener("click", function(e) {
     addOperator(e.target.textContent);
   } else if (e.target.classList.contains("equals")) {
     saveCurrentNumber(displayBox.textContent, false);
-    displayBox.textContent = operate(firstNumber,operatorValue,secondNumber);
+    operate(firstNumber,operatorValue,secondNumber)
+    displayBox.textContent = result.toPrecision(5);
     historicDisplay.textContent = "";
   }
 })
